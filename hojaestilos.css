@@ -1,0 +1,260 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111111;
+    color: white;
+    line-height: 1.6;
+}
+
+header {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #8b0000;
+}
+
+.logo h1 {
+    margin: 0;
+    color: #d62828;
+    font-size: 38px;
+    font-family: Georgia, serif;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 8px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: #8b0000;
+    padding: 10px 22px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #d62828;
+}
+
+.portada {
+    background-image: url("image.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    text-align: center;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.55);
+    min-height: 500px;
+    padding: 150px 20px 0;
+}
+
+.overlay h2 {
+    font-size: 56px;
+    margin-bottom: 20px;
+    font-family: Georgia, serif;
+}
+
+.overlay p {
+    font-size: 23px;
+}
+
+main {
+    padding: 35px;
+}
+
+.contenido {
+    width: 85%;
+    margin: auto;
+}
+
+.intro,
+.destacado,
+.info,
+.info-contacto,
+.formulario,
+.menu-seccion,
+.galeria {
+    background-color: #1c1c1c;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+h2, h3 {
+    color: #d62828;
+}
+
+.texto-centro {
+    text-align: center;
+}
+
+.dos-columnas {
+    text-align: center;
+}
+
+.caja {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+    margin: 10px;
+    background-color: #1c1c1c;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Galería del index */
+.galeria {
+    text-align: center;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #8b0000;
+}
+
+/* Menú profesional */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.menu-card {
+    background-color: #1c1c1c;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: scale(1.03);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.menu-card h3 {
+    margin: 15px 10px 5px;
+}
+
+.menu-card p {
+    padding: 0 18px;
+    color: #dddddd;
+}
+
+.menu-card span {
+    display: block;
+    color: #ffcc70;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+/* Formulario */
+form {
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+input[type="submit"]:hover {
+    background-color: #d62828;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 18px;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .menu-grid,
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .caja {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav ul li {
+        display: block;
+    }
+
+    .overlay h2 {
+        font-size: 38px;
+    }
+
+    .menu-grid,
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contenido {
+        width: 95%;
+    }
+
+    .menu-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+}
